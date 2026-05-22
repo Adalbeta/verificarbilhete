@@ -1,0 +1,154 @@
+.hiw {
+  padding: 100px 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.hiw__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hiw__header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.hiw__tag {
+  display: inline-block;
+  padding: 5px 14px;
+  background: var(--accent-subtle);
+  color: var(--accent);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  border: 1px solid rgba(14, 165, 233, 0.2);
+}
+
+.hiw__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.hiw__subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.hiw__steps {
+  display: flex;
+  gap: 0;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+}
+
+.hiw__step {
+  flex: 1;
+  max-width: 300px;
+  padding: 36px 28px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  position: relative;
+  transition: all var(--transition-slow);
+  animation: fadeUp 0.5s ease both;
+}
+
+.hiw__step:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-focus);
+}
+
+.hiw__step-number {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.hiw__step-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--accent-subtle);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  margin-bottom: 20px;
+  transition: all var(--transition);
+}
+
+.hiw__step:hover .hiw__step-icon {
+  background: var(--accent);
+  color: white;
+  box-shadow: var(--shadow-accent);
+}
+
+.hiw__step-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.hiw__step-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+.hiw__step-desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.hiw__connector {
+  position: absolute;
+  right: -28px;
+  top: 72px;
+  color: var(--text-muted);
+  opacity: 0.4;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hiw__connector svg {
+  width: 40px;
+  height: 12px;
+}
+
+@media (max-width: 900px) {
+  .hiw__steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .hiw__step {
+    max-width: 480px;
+    width: 100%;
+  }
+
+  .hiw__connector {
+    display: none;
+  }
+}

@@ -1,0 +1,65 @@
+.ticker {
+  width: 100%;
+  overflow: hidden;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.ticker__label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 20px;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  flex-shrink: 0;
+  border-right: 1px solid var(--border);
+  margin-right: 16px;
+}
+
+.ticker__dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.ticker__track-wrap {
+  flex: 1;
+  overflow: hidden;
+}
+
+.ticker__track {
+  display: flex;
+  white-space: nowrap;
+  animation: tickerSlide 28s linear infinite;
+  gap: 0;
+}
+
+.ticker__track:hover {
+  animation-play-state: paused;
+}
+
+.ticker__item {
+  display: inline-block;
+  padding: 0 40px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.ticker__item:nth-child(odd) {
+  color: var(--success);
+  font-weight: 600;
+}
