@@ -59,11 +59,6 @@ function App() {
                 {t.hero.badge}
               </div>
 
-              <h1 className="hero__title">
-                {t.hero.title}<br />
-                <span className="hero__title-accent">{t.hero.titleAccent}</span>
-              </h1>
-
               <button className="hero__cta" onClick={scrollToForm}>
                 {t.hero.cta}
                 <svg viewBox="0 0 20 20" fill="none">
