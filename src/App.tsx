@@ -51,12 +51,10 @@ function App() {
       {/* Hero Section */}
       <main>
         <section className="hero">
-
             {/* Right: Form */}
             <div className="hero__form-wrap">
               <VerifyForm t={t} formRef={formRef as React.RefObject<HTMLDivElement>} />
             </div>
-          </div>
         </section>
 
         {/* Live ticker */}
