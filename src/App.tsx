@@ -64,48 +64,12 @@ function App() {
                 <span className="hero__title-accent">{t.hero.titleAccent}</span>
               </h1>
 
-              
-
-              <div className="hero__stats">
-                <div className="hero__stat">
-                  <span className="hero__stat-value">{t.hero.stats.verified}</span>
-                  <span className="hero__stat-label">{t.hero.stats.verifiedLabel}</span>
-                </div>
-                <div className="hero__stat-divider" />
-                <div className="hero__stat">
-                  <span className="hero__stat-value">{t.hero.stats.accuracy}</span>
-                  <span className="hero__stat-label">{t.hero.stats.accuracyLabel}</span>
-                </div>
-                <div className="hero__stat-divider" />
-                <div className="hero__stat">
-                  <span className="hero__stat-value">{t.hero.stats.support}</span>
-                  <span className="hero__stat-label">{t.hero.stats.supportLabel}</span>
-                </div>
-              </div>
-
               <button className="hero__cta" onClick={scrollToForm}>
                 {t.hero.cta}
                 <svg viewBox="0 0 20 20" fill="none">
                   <path d="M4 10h12M12 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </button>
-
-              {/* Trust badges */}
-              <div className="hero__trust">
-                <div className="hero__trust-item">
-                  <svg viewBox="0 0 16 16" fill="none"><path d="M8 1.5L2 4v4c0 3.3 2.5 6.1 6 7 3.5-.9 6-3.7 6-7V4L8 1.5z" stroke="currentColor" strokeWidth="1.2"/></svg>
-                  SSL Secured
-                </div>
-                <div className="hero__trust-item">
-                  <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" strokeWidth="1.2"/><path d="M5 8l2 2 4-4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/></svg>
-                  Instant Result
-                </div>
-                <div className="hero__trust-item">
-                  <svg viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h8M2 12h10" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/></svg>
-                  No Registration
-                </div>
-              </div>
-            </div>
 
             {/* Right: Form */}
             <div className="hero__form-wrap">
