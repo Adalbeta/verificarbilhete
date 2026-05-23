@@ -51,20 +51,6 @@ function App() {
       {/* Hero Section */}
       <main>
         <section className="hero">
-          <div className="hero__inner">
-            {/* Left: copy */}
-            <div className="hero__copy">
-              <div className="hero__badge">
-                <span className="hero__badge-dot"></span>
-                {t.hero.badge}
-              </div>
-
-              <button className="hero__cta" onClick={scrollToForm}>
-                {t.hero.cta}
-                <svg viewBox="0 0 20 20" fill="none">
-                  <path d="M4 10h12M12 5l5 5-5 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
 
             {/* Right: Form */}
             <div className="hero__form-wrap">
