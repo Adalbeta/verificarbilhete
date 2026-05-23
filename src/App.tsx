@@ -64,7 +64,7 @@ function App() {
                 <span className="hero__title-accent">{t.hero.titleAccent}</span>
               </h1>
 
-              <p className="hero__subtitle">{t.hero.subtitle}</p>
+              
 
               <div className="hero__stats">
                 <div className="hero__stat">
