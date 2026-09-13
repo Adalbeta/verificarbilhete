@@ -4,15 +4,11 @@ import './Header.css'
 
 interface HeaderProps {
   t: Translations
-  theme: 'dark' | 'light'
-  toggleTheme: () => void
   onVerifyClick: () => void
 }
 
 export const Header: React.FC<HeaderProps> = ({
   t,
-  theme,
-  toggleTheme,
   onVerifyClick
 }) => {
   const [scrolled, setScrolled] = React.useState(false)
@@ -88,50 +84,6 @@ export const Header: React.FC<HeaderProps> = ({
         {/* Controls */}
         <div className="header__controls">
 
-          {/* Theme toggle */}
-          <button
-            className="header__theme-toggle"
-            onClick={toggleTheme}
-            aria-label="Toggle theme"
-          >
-            {theme === 'dark' ? (
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="5"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                />
-
-                <path
-                  d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                />
-              </svg>
-            ) : (
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            )}
-          </button>
-
           {/* CTA */}
           <button
             className="header__cta"
@@ -188,19 +140,6 @@ export const Header: React.FC<HeaderProps> = ({
           >
             {t.nav.howItWorks}
           </a>
-
-          <div className="header__mobile-divider" />
-
-          {/* Mobile theme control */}
-          <div className="header__mobile-controls">
-            <button
-              className="header__theme-toggle"
-              onClick={toggleTheme}
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? '☀️' : '🌙'}
-            </button>
-          </div>
 
         </div>
       )}
