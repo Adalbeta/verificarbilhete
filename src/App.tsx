@@ -5,15 +5,14 @@ import { HowItWorks } from './components/HowItWorks'
 import { Ticker } from './components/Ticker'
 import { Footer } from './components/Footer'
 import { translations } from './utils/i18n'
-import type { Lang } from './utils/i18n'
 import './App.css'
 
 function App() {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark')
-  const [lang, setLang] = useState<Lang>('en')
   const formRef = useRef<HTMLDivElement>(null)
 
-  const t = translations[lang]
+  // English only
+  const t = translations.en
 
   // Apply theme to document
   useEffect(() => {
@@ -26,10 +25,14 @@ function App() {
     setTheme(mq.matches ? 'dark' : 'light')
   }, [])
 
-  const toggleTheme = () => setTheme(t => t === 'dark' ? 'light' : 'dark')
+  const toggleTheme = () =>
+    setTheme(t => t === 'dark' ? 'light' : 'dark')
 
   const scrollToForm = () => {
-    formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    formRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    })
   }
 
   return (
@@ -41,8 +44,6 @@ function App() {
 
       <Header
         t={t}
-        lang={lang}
-        setLang={setLang}
         theme={theme}
         toggleTheme={toggleTheme}
         onVerifyClick={scrollToForm}
@@ -51,10 +52,13 @@ function App() {
       {/* Hero Section */}
       <main>
         <section className="hero">
-            {/* Right: Form */}
-            <div className="hero__form-wrap">
-              <VerifyForm t={t} formRef={formRef as React.RefObject<HTMLDivElement>} />
-            </div>
+          {/* Form */}
+          <div className="hero__form-wrap">
+            <VerifyForm
+              t={t}
+              formRef={formRef as React.RefObject<HTMLDivElement>}
+            />
+          </div>
         </section>
 
         {/* Live ticker */}
